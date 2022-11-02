@@ -76,9 +76,9 @@ session_start();
 			<input id="text" type="text" name="user_name"><br><br>
 			<input id="text" type="password" name="password"><br><br>
 
-			<input id="button" type="submit" value="Tilmeld"><br><br>
+			<input id="button" type="submit" value="Tilmeld"><br><br> // tilmeldingsknap
 
-			<a href="login.php">Er du allerede bruger? Log ind</a><br><br>
+			<a href="login.php">Er du allerede bruger? Log ind</a><br><br> // link til login-siden
 		</form>
 	</div>
 </body>
