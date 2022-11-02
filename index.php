@@ -1,5 +1,6 @@
 <?php 
 session_start();
+// vi starter en session som inkluderer filerne med userdata og forbindelse til databasen, for at tjekke om brugeren er logget ind
 
 	include("connection.php");
 	include("functions.php");
@@ -19,6 +20,6 @@ session_start();
 	<h1>Velkommen til Restaurant Trendsetter</h1>
 
 	<br>
-	Hej, <?php echo $user_data['user_name']; ?>
+	Hej, <?php echo $user_data['user_name']; ?> // Vi udskriver userdata i form at brugernavnet
 </body>
 </html>
