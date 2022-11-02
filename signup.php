@@ -5,19 +5,18 @@ session_start();
 	include("functions.php");
 
 
-	if($_SERVER['REQUEST_METHOD'] == "POST") // Vi tjekker om brugerenn har trykket på "tilmeld"-knappen
+	if($_SERVER['REQUEST_METHOD'] == "POST") // Vi tjekker om brugeren har trykket på "tilmeld"-knappen
 	{
 		
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
-		
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name)) 	// vi tjekker om user_name og password er udfyldt og at brugernavnet ikke kun består af tal
 
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name)) // vi tjekker om user_name og password er udfyldt og at brugernavnet ikke kun består af tal
 		{
 
-			// hvis det er udfyldt, så gemmes informationerne i databasen og en bruger er oprettet
-			$user_id = random_num(20); //den laver et random user_id der består af 20 tal
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+			// Hvis det er udfyldt, så gemmes informationerne i databasen og en bruger er oprettet
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')"; //den laver et random user_id der består af 20 tal
 
 			mysqli_query($con, $query); // vi gemmer til databasen
 
@@ -70,15 +69,15 @@ session_start();
 
 	<div id="box">
 		
-		<form method="post"> <!-- de felter der bliver tjekket i ovenstående kode -->
+		<form method="post"> <!-- De felter der bliver tjekket i ovenstående kode -->
 			<div style="font-size: 20px;margin: 10px;color: white;">Tilmeld dig</div>
 
 			<input id="text" type="text" name="user_name"><br><br>
 			<input id="text" type="password" name="password"><br><br>
 
-			<input id="button" type="submit" value="Tilmeld"><br><br> <!-- tilmeldingsknap -->
+			<input id="button" type="submit" value="Tilmeld"><br><br> <!-- Tilmeldingsknap -->
 
-			<a href="login.php">Er du allerede bruger? Log ind</a><br><br> <!-- link til login-siden -->
+			<a href="login.php">Er du allerede bruger? Log ind</a><br><br> <!--link til login-siden  -->
 		</form>
 	</div>
 </body>

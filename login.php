@@ -17,7 +17,7 @@ session_start();
 
 			// Hvis ovenstående er udfyldt læses informationerne fra databasen
 			$query = "select * from users where user_name = '$user_name' limit 1"; // Vi sammenligner, om det brugernavn der er indtastet af brugeren, findes i databasen. "Limit 1" sørger for, at vi kun får 1 resultat
-			$result = mysqli_query($con, $query); // Skrives for at få resultatet  
+			$result = mysqli_query($con, $query); // Skrives for at få resultatet 
 
 			if($result) // Vi tjekker, om resultatet er rigtigt
 			{
@@ -36,7 +36,7 @@ session_start();
 				}
 			}
 			
-		}else
+		} else
 		{
 			echo "Forkert brugernavn eller kodeord!"; // Udskriver denne sætning, hvis ovenstående ikke er opfyldt. 
 		}
@@ -81,7 +81,7 @@ session_start();
 	}
 
 	</style>
-
+ 
 	<div id="box">
 		
 		<form method="post"> <!-- De felter der bliver tjekket i ovenstående kode -->
