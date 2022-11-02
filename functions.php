@@ -1,26 +1,27 @@
 <?php
-
-function check_login($con)
+function check_login($con).  // Funktionen tjekker om brugeren er logget ind.
 {
 
-	if(isset($_SESSION['user_id']))
+	//En session opbevare information i form af variabler, som kan bruges på tværs af flere sider.
+	if(isset($_SESSION['user_id'])) //Her tjekker vi om der i sessionen er et user_id
+		
 	{
-
+		//Her tjekkes om user_id eksisterer i databasen
 		$id = $_SESSION['user_id'];
-		$query = "select * from users where user_id = '$id' limit 1";
+		$query = "select * from users where user_id = '$id' limit 1"; //Der oprettes en forespørgsel til databasen
 
-		$result = mysqli_query($con,$query);
-		if($result && mysqli_num_rows($result) > 0)
+		$result = mysqli_query($con,$query); //Result variablen defineres
+		if($result && mysqli_num_rows($result) > 0) //Hvis resultatet er positivt og antallet af rækker er større end 0, hentes data ved nedenstående kode.
 		{
 
 			$user_data = mysqli_fetch_assoc($result);
-			return $user_data;
+			return $user_data; //Brugerens data bliver returneret.
 		}
 	}
 
-	//redirect til login siden
+	//Hvis ovenstående ikke virker bliver brugeren omdirigeret til login siden.
 	header("Location: login.php");
-	die;
+	die; //Sørger for at koden ikke fortsætter.
 
 }
 
