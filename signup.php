@@ -5,26 +5,27 @@ session_start();
 	include("functions.php");
 
 
-	if($_SERVER['REQUEST_METHOD'] == "POST")
+	if($_SERVER['REQUEST_METHOD'] == "POST") // Vi tjekker om brugerenn har trykket på "tilmeld"-knappen
 	{
 		
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
+		
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name)) 	// vi tjekker om user_name og password er udfyldt og at brugernavnet ikke kun består af tal
 
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			
-			$user_id = random_num(20);
+			// hvis det er udfyldt, så gemmes informationerne i databasen og en bruger er oprettet
+			$user_id = random_num(20); //den laver et random user_id der består af 20 tal
 			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
 
-			mysqli_query($con, $query);
+			mysqli_query($con, $query); // vi gemmer til databasen
 
-			header("Location: login.php");
+			header("Location: login.php"); // redirect til login-siden efter oprettelse
 			die;
 		}else
 		{
-			echo "Venligst indtast gyldigt information!";
+			echo "Venligst indtast gyldigt information!"; //hvis ovenstående ikke er udfyldt, så udsriver den dette
 		}
 	}
 ?>
@@ -69,7 +70,7 @@ session_start();
 
 	<div id="box">
 		
-		<form method="post">
+		<form method="post"> // de felter der bliver tjekket i ovenstående kode
 			<div style="font-size: 20px;margin: 10px;color: white;">Tilmeld dig</div>
 
 			<input id="text" type="text" name="user_name"><br><br>
