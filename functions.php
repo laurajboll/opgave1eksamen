@@ -29,21 +29,22 @@ function check_login($con) // Funktionen tjekker om brugeren er logget ind.
 
 }
 
-function random_num($length)
+
+function random_num($length) //Length afgøre længden af user_id
 {
 
-	$text = "";
-	if($length < 5)
+	$text = ""; 
+	if($length < 5) //Længden kan ikke være mindre end 5
 	{
 		$length = 5;
 	}
 
-	$len = rand(4,$length);
+	$len = rand(4,$length); //Man får et random nummer mellem 4 og ens maxnummer, som er 20.
 
-	for ($i=0; $i < $len; $i++) { 
+	for ($i=0; $i < $len; $i++) { //Der laves en for loop, så ikke alle user_id har den samme længde.
 
 		$text .= rand(0,9);
 	}
 
-	return $text;
+	return $text; //User_id bliver returneret
 }
