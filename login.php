@@ -38,7 +38,7 @@ session_start();
 			
 		} else
 		{
-			echo "Forkert brugernavn eller kodeord!"; // Udskriver denne sætning, hvis ovenstående ikke er opfyldt. 
+			echo "<p> <font color=#e6e1dc>Forkert brugernavn eller kodeord! </font> </p>"; // Udskriver denne sætning, hvis ovenstående ikke er opfyldt. 
 		}
 	}
 
