@@ -1,85 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
-body{
-    background: #00573f; 
-    font-family: 'montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+body {
+  background: #00573f;
+  font-family: "montserrat", sans-serif;
 }
 
-
-#text{
-    color: black;
-    height: 25px;
-    border-radius: 5px;
-    padding: 4px;
-    border: solid thin #aaa;
-    width: 90%;
-    vertical-align: middle;
+#text {
+  color: black;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 4px;
+  border: solid thin #aaa;
+  width: 90%;
+  vertical-align: middle;
 }
 
-#button{
-
-    padding: 10px;
-    width: 100px;
-    color: #e6e1dc;
-    background-color: #00573f;
-    border: none;
-    font-family: montserrat, sans-serif;
-    font-weight: 600;
+#button {
+  padding: 10px;
+  width: 50%;
+  color: #e6e1dc;
+  background-color: #00573f;
+  border: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 600;
+  font-size: large;
 }
 
-#box{
-
-    background-color: #e6e1dc;
-    margin: auto;
-    margin-top: 10vh;
-    width: 500px;
-    padding: 20px;
-
+#button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }
 
-p{
-    color: #333;
-    height: 25px;
-    border-radius: 5px;
-    padding: 4px;
-    width: 100%;
+#box {
+  background-color: #e6e1dc;
+  margin: auto;
+  margin-top: 10vh;
+  width: 500px;
+  padding: 20px;
+}
+
+p {
+  color: #333;
+  height: 25px;
+  border-radius: 5px;
+  padding: 4px;
+  width: 100%;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
-    color: #00573f;
+  color: #00573f;
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #e6e1dc;
-    margin-top: 7vh;
-    font-size: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #e6e1dc;
+  margin-top: 7vh;
+  font-size: 4rem;
 }
 
-.label
-{
-    color: #333;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 5px;
+.label {
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
 }
 
 /* Media Query */
 @media only screen and (max-width: 700px) {
-   
-    #box {
-      width: 100%;
-    
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
+  #box {
+    width: 100%;
   }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
