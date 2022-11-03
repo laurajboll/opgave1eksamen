@@ -34,49 +34,18 @@ session_start();
 <html>
 <head>
 	<title>Tilmeld dig</title>
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-
-	<style type="text/css">
-	
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
+<h1>Opret ny bruger</h1>
 	<div id="box">
-		
-		<form method="post"> <!-- De felter der bliver tjekket i ovenstående kode -->
-			<div style="font-size: 20px;margin: 10px;color: white;">Tilmeld dig</div>
-
+	<form class="form" method ="post"> 
+	<div style="font-size: 20px;"><p>Tilmelding</p></div>
+			<label class="label" for="user_name">Brugernavn:</label>
 			<input id="text" type="text" name="user_name"><br><br>
+			<label class="label" for="password">Adgangskode:</label>
 			<input id="text" type="password" name="password"><br><br>
-
-			<input id="button" type="submit" value="Tilmeld"><br><br> <!-- Tilmeldingsknap -->
-
+			<input id="button" type="submit" value="Tilmeld dig"><br><br>
 			<a href="login.php">Er du allerede bruger? Log ind</a><br><br> <!--link til login-siden  -->
 		</form>
 	</div>
