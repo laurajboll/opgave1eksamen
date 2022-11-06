@@ -24,7 +24,7 @@ session_start();
 			die;
 		}else
 		{
-			echo "Venligst indtast gyldigt information!"; //hvis ovenstående ikke er udfyldt, så udsriver den dette
+			echo "<p> <font color=#FFFFFF>Venligst indtast gyldigt information! </p>"; //hvis ovenstående ikke er udfyldt, så udsriver den dette
 		}
 	}
 ?>
@@ -33,14 +33,13 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tilmeld dig</title>
-	<link rel="stylesheet" href="stylesheet.css">
+<title>Opret bruger</title>	
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<h1>Opret ny bruger</h1>
 	<div id="box">
 	<form class="form" method ="post"> 
-	<div style="font-size: 20px;"><p>Tilmelding</p></div>
+	<div style="font-size: 20px;"><h1>Opret ny bruger</h1></div>
 			<label class="label" for="user_name">Brugernavn:</label>
 			<input id="text" type="text" name="user_name"><br><br>
 			<label class="label" for="password">Adgangskode:</label>

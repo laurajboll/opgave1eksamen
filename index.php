@@ -1,5 +1,5 @@
 <?php 
-// vi starter en session som inkluderer filerne med userdata og forbindelse til databasen, for at tjekke om brugeren er logget ind
+// Vi starter en session, som inkluderer filerne med userdata og forbindelse til databasen, for at tjekke om brugeren er logget ind
 
 session_start();
 
@@ -14,13 +14,15 @@ session_start();
 <html>
 <head>
 	<title>Restaurant Trendsetter</title>
+	<link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 
 	<a href="logout.php">Log ud</a>
-	<h1>Velkommen til Restaurant Trendsetter</h1>
+	<h1>Restaurant Trendsetter</h1>
 
 	<br>
-	Hej, <?php echo $user_data['user_name']; ?> <!-- Vi udskriver userdata i form at brugernavnet -->
+	<div class="welcome"> Velkommen, <?php echo $user_data['user_name']; ?> </div> <!-- Vi udskriver userdata i form af brugernavnet -->
 </body>
 </html>

@@ -38,7 +38,7 @@ session_start();
 			
 		} else
 		{
-			echo "<p> <font color=#e6e1dc>Forkert brugernavn eller kodeord! </font> </p>"; // Udskriver denne sætning, hvis ovenstående ikke er opfyldt. 
+			echo "<p> <font color=#FFFFFF>Forkert brugernavn eller kodeord! </font> </p>"; // Udskriver denne sætning, hvis ovenstående ikke er opfyldt. 
 		}
 	}
 
@@ -53,18 +53,17 @@ session_start();
 
 </head>
 <body>
- <h1>Medarbejder login</h1>
 	<div id="box">
 		
 		<form class="form" method ="post"> <!-- De felter der bliver tjekket i ovenstående kode -->
-			<div style="font-size: 20px;"><p>Log ind</p></div>
+			<div style="font-size: 20px;"><h1>Log ind</h1></div>
 			<label class="label" for="user_name">Brugernavn:</label>
 			<input id="text" type="text" name="user_name"><br><br>
 			<label class="label" for="password">Adgangskode:</label>
 			<input id="text" type="password" name="password"><br><br>
 			<input id="button" type="submit" value="Log ind"><br><br> <!-- Login-knap -->
 
-			<a href="signup.php">Tilmeld dig</a><br><br> <!-- Link til signup-siden -->
+			<a href="signup.php">Er du ny bruger? Tilmeld dig</a><br><br> <!-- Link til signup-siden -->
 		</form>
 	</div>
 </body>
